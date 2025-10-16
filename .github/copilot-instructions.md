@@ -22,8 +22,14 @@ Ce projet est une application web simple avec la structure suivante :
 
 - **Frontend**: HTML5 avec Bootstrap 5.3.2
 - **CSS**: Utilisation de Bootstrap pour le styling de base + CSS personnalisé
-- **JavaScript**: Scripts personnalisés dans le dossier `assets/js/`
+- **JavaScript**: Scripts personnalisés dans le dossier `assets/js/` pour la gestion des filtres et l'interactivité
 - **Serveur**: XAMPP (Apache) pour le développement local
+
+### Logique JavaScript
+Le fichier `assets/js/script.js` gère :
+- Le filtrage dynamique entre les sections BB et SNB
+- L'écoute des événements sur les boutons de filtre
+- La manipulation de l'affichage des sections via `style.display`
 
 ## Conventions Importantes
 
@@ -53,6 +59,10 @@ Ce projet est une application web simple avec la structure suivante :
   - `text-center` pour le centrage du texte
   - `d-flex` pour la disposition flexible
   - Classes Bootstrap de spacing (`mb-4`, `gap-3`, etc.)
+- Classes spécifiques au projet :
+  - `.gamme.bb` pour la section des produits BB
+  - `.gamme.snb` pour la section des produits SNB
+  - `.filtre` pour les boutons de filtrage
 
 ## Points d'Intégration
 
