@@ -16,19 +16,30 @@ main {
   padding: 2rem;
 }
 
+.gammes {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .gamme {
-  margin-bottom: 3rem;
+  flex: 1 1 400px;
+  max-width: 500px;
 }
 
 .gamme h2 {
   color: #007BFF;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .boissons {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .boisson {
@@ -36,7 +47,8 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   padding: 1rem;
-  width: 200px;
+  width: 100%;
+  max-width: 300px;
   text-align: center;
 }
 
