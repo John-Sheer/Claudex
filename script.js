@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500 + i * 300);
         });
 
+        
         // Message de bienvenue avec fondu
         const welcome = document.createElement('div');
         welcome.textContent = 'Savourez-bien nos produits!!!...🍻';
