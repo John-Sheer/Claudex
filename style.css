@@ -12,9 +12,16 @@ header {
 }
 
 header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #FFF;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #FFF;
+    text-shadow:
+        2px 2px 8px #000,
+        0 0 10px #007BFF,
+        0 0 20px #007BFF,
+        4px 4px 12px #333,
+        0 2px 4px #222,
+        1px 1px 0 #444;
 }
 
 .retour {
