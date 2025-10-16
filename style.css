@@ -1,121 +1,167 @@
-body.index {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url("media/boissonsSNB.jfif") center/cover no-repeat fixed;
-}
-
-.background-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
-  color: white;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 header {
   text-align: center;
   padding: 2rem 1rem;
+  background-color: transparent;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #FFF;
 }
 
-.choix-gammes {
-  display: flex;
-  gap: 2rem;
-}
-
-.choix-gammes img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-
-.choix-gammes img:hover {
-  transform: scale(1.05);
-}
-
-footer {
+.retour {
   text-align: center;
-  padding: 1rem;
+  margin: 2rem 0;
 }
 
-
-/* Style spécifique aux pages de gamme */
-body.gamme-page {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-body.gamme-page header {
-  background-color: #007BFF;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-body.gamme-page main {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-body.gamme-page .boissons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-body.gamme-page .boisson {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 1rem;
-  width: 220px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-body.gamme-page .boisson:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-body.gamme-page .boisson img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-body.gamme-page .retour {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-body.gamme-page .retour a {
+.retour a {
   color: #007BFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
-body.gamme-page .retour a:hover {
+.retour a:hover {
   text-decoration: underline;
 }
 
-body.gamme-page footer {
-  background-color: #222;
+.boissons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 120px;
+}
+
+.boisson {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boisson:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.boisson img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 4rem;
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+/* === Fond image pour index uniquement === */
+body.index {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("media/boissonsSNB.jfif") center/cover no-repeat fixed;
+  color: white;
+}
+
+/* === Overlay sombre pour lisibilité === */
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === Footer tamisé uniquement pour index === */
+body.index footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  font-size: 0.9rem;
+}
+/* === Fond image pour index uniquement === */
+body.index {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("media/boissonsSNB.jfif") center/cover no-repeat fixed;
+  color: white;
+}
+
+/* === Overlay sombre pour lisibilité === */
+body.index .background-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === Header centré === */
+body.index header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+body.index header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+body.index header p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+/* === Centrage et style des images BB/SNB === */
+body.index .choix-gammes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+body.index .choix-gammes img {
+  width: 200px;
+  height: auto;
+  border-radius: 20px; /* coins arrondis */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+body.index .choix-gammes img:hover {
+  transform: scale(1.05);
+}
+
+/* === Footer tamisé avec effet flou === */
+body.index footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  font-size: 0.9rem;
 }
