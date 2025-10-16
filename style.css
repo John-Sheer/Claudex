@@ -1,12 +1,8 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 body.index {
-  background: url("media/boissonsSNB.jfif") center/cover no-repeat fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("media/boissonsSNB.jfif") center/cover no-repeat fixed;
 }
-
 
 .background-overlay {
   background-color: rgba(0, 0, 0, 0.6);
@@ -49,18 +45,77 @@ footer {
   padding: 1rem;
 }
 
-.retour {
-  text-align: center;
-  margin: 2rem 0;
+
+/* Style spécifique aux pages de gamme */
+body.gamme-page {
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-.retour a {
+body.gamme-page header {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+body.gamme-page main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.gamme-page .boissons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+body.gamme-page .boisson {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+body.gamme-page .boisson:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.gamme-page .boisson img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+body.gamme-page .retour {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+body.gamme-page .retour a {
   color: #007BFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
-.retour a:hover {
+body.gamme-page .retour a:hover {
   text-decoration: underline;
+}
+
+body.gamme-page footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
 }
