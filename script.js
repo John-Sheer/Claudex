@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Message de bienvenue avec fondu
         const welcome = document.createElement('div');
-        welcome.textContent = 'Savourez-bien nos produits!!!🍻';
+        welcome.textContent = 'Savourez-bien nos produits!!!...🍻';
         Object.assign(welcome.style, {
             position: 'fixed',
             top: '20px',
