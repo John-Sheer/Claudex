@@ -49,17 +49,21 @@ header h1 {
   padding: 2rem 1rem 120px;
 }
 
+/* === Animation et survol des vignettes === */
 .boisson {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 1rem;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1;
 }
 
 .boisson:hover {
-  transform: scale(1.05);
+transform: scale(1.08) rotate(2deg);
+background-color: #e8ffe8;
+border: 2px solid #32a02e;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
