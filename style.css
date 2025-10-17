@@ -65,7 +65,25 @@ header h1 {
   right: 2rem;
 }
 
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  } 
+  }
+  .header-bar h1 {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
 
+  .header-bar .Card {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+  }
 
 /* Carte de recherche stylisée */
 .Card {
