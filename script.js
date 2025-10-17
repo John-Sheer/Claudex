@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500 + i * 300);
         });
 
-        
+
         // Message de bienvenue avec fondu
         const welcome = document.createElement('div');
         welcome.textContent = 'Savourez-bien nos produits!!!...🍻';
@@ -57,3 +57,53 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const texte = document.querySelector('.texte-attention');
+  if (!texte || texte === document.body || texte === document.documentElement) return;
+
+  let inner = texte.querySelector('.texte-attention-inner');
+  if (!inner) {
+    inner = document.createElement('span');
+    inner.className = 'texte-attention-inner';
+    inner.innerHTML = texte.innerHTML;
+
+    if (getComputedStyle(texte).position === 'static') {
+      texte.style.position = 'relative';
+    }
+
+    texte.innerHTML = '';
+    texte.appendChild(inner);
+  }
+
+  Object.assign(inner.style, {
+    display: 'inline-block',
+    transformOrigin: 'center',
+    transition: 'transform 0.4s ease, text-shadow 0.4s ease',
+    willChange: 'transform, text-shadow'
+  });
+
+  let toggled = false;
+  const intervalMs = 1000;
+
+  setInterval(() => {
+    if (toggled) {
+      inner.style.transform = 'scale(1)';
+      inner.style.textShadow = `
+        0 0 5px white,
+        0 0 10px white,
+        0 0 15px white
+      `;
+    } else {
+      inner.style.transform = 'scale(1.08)';
+      inner.style.textShadow = `
+        0 0 10px white,
+        0 0 20px white,
+        0 0 30px limegreen
+      `;
+    }
+    toggled = !toggled;
+  }, intervalMs);
+});
+
+

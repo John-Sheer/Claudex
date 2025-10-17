@@ -54,7 +54,14 @@ header h1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem 120px;
+  
 }
+
+.boisson p {
+  color: rgb(240, 23, 23);
+  font-weight: bold;
+}
+
 
 /* === Animation et survol des vignettes === */
 .boisson {
@@ -165,4 +172,15 @@ body.index .choix-gammes img:hover {
 body.index main {
   margin-top: 50px; 
   padding-top: 0; /* ✅ aucun espace ajouté */
+}
+.texte-attention {
+  text-align: center;
+  font-style: italic;
+  color: #FFF(252, 6, 6);
+  font-weight: bold;
+  text-shadow:
+    0 0 10px hsl(0, 100%, 49%),
+    0 0 30px rgb(255, 0, 0),
+    0 0 25px rgb(255, 0, 0);
+  transition: transform 0.1s ease, opacity 0.1s ease;
 }
