@@ -6,17 +6,39 @@
   <title>Gamme SNB - Bar Claudex</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Contenu principal -->
 <body class="gamme-page snb-page">
 
+  <!-- En-tête de la page -->
   <header>
-    <h1>PRODUITS SNB</h1>
+      <div class="header-bar">
+        <h1>PRODUIT SNB</h1>
+        <div class="Card">
+          <div class="CardInner">
+            <div class="container">
+              <div class="Icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#32a02e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </div>
+              <div class="InputContainer">
+                <input type="text" id="champ-recherche" placeholder="Rechercher...">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </header>
 
+<!--  Boutons de navigation -->
   <div class="retour">
     <a href="index.html">Accueil ← </a>
     <a href="BB.html">→ Produits BB  </a>
   </div>
   
+<!-- Contenu principal : liste des boissons SNB -->
   <main>
     <div class="boissons">
       <div class="boisson">
@@ -111,6 +133,7 @@
       </div> 
     </div>
     
+    <!-- Boutons de navigation -->
     <div class="retour">
       <a href="index.html">Accueil ← </a>
       <a href="BB.html">→ Produits BB</a>
@@ -124,10 +147,15 @@
 <br>
 <br>
 
-  <footer>
-    <p>&copy; 2025 Bar SheersLab - Tous droits réservés</p>
-  </footer>
+<!-- Pied de page -->
+<footer class="site-footer bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-1">&copy; 2025 Claudex | Tous droits réservés.</p>
+        <p>Propulsé par <a>Sheerslab</a></p>
+    </div>
+</footer>
 
+  <!-- Script principal js-->
  <script src="script.js"></script>
 
 </body>

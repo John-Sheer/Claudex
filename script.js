@@ -106,4 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }, intervalMs);
 });
 
+// Fonction de filtrage des boissons par nom ou prix
+document.addEventListener('DOMContentLoaded', () => {
+  const champ = document.getElementById('champ-recherche');
+  champ.addEventListener('input', () => {
+    const terme = champ.value.toLowerCase().trim();
+    const boissons = document.querySelectorAll('.boisson');
+    boissons.forEach(boisson => {
+      const nom = boisson.querySelector('h3')?.textContent.toLowerCase() || '';
+      const prix = boisson.querySelector('p')?.textContent.toLowerCase() || '';
+      boisson.style.display = (nom.includes(terme) || prix.includes(terme)) ? 'block' : 'none';
+    });
+  });
+});
+
+
+
 
