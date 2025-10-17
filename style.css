@@ -5,6 +5,13 @@ body {
   color: #333;
 }
 
+/* ✅ Ombre verte sous le header pour SNB et BB uniquement */
+body.snb-page header,
+body.bb-page header {
+  box-shadow: 0 8px 12px -4px rgb(11, 105, 11);
+}
+
+
 header {
   text-align: center;
   padding: 2rem 1rem;
@@ -12,16 +19,16 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #FFF;
-    text-shadow:
-        2px 2px 8px #000,
-        0 0 10px #32a02e,
-        0 0 20px #30b637,
-        4px 4px 12px #333,
-        0 2px 4px #222,
-        1px 1px 0 #444;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: #FFF;
+  text-shadow:
+    2px 2px 8px #000,
+    0 0 10px #32a02e,
+    0 0 20px #30b637,
+    4px 4px 12px #333,
+    0 2px 4px #222,
+    1px 1px 0 #444;
 }
 
 .retour {
@@ -59,7 +66,6 @@ header h1 {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* 🔄 Nouveau effet au survol */
 .boisson img {
   width: 100%;
   height: 150px;
@@ -69,13 +75,11 @@ header h1 {
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-/* 💥 Effet très dynamique au survol */
 .boisson:hover img {
   transform: scale(1.08) rotate(-2deg);
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
   border-color: limegreen;
 }
-
 
 footer {
   position: fixed;
@@ -90,32 +94,7 @@ footer {
   z-index: 1000;
   font-size: 0.9rem;
 }
-/* === Fond image pour index uniquement === */
-body.index {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("media/boissonsSNB.jfif") center/cover no-repeat fixed;
-  color: white;
-}
 
-/* === Overlay sombre pour lisibilité === */
-.background-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* === Footer tamisé uniquement pour index === */
-body.index footer {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  backdrop-filter: blur(4px);
-  font-size: 0.9rem;
-}
 /* === Fond image pour index uniquement === */
 body.index {
   margin: 0;
@@ -130,13 +109,24 @@ body.index .background-overlay {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* ✅ modifié pour éviter l'espacement vertical */
 }
 
-/* === Header centré === */
+/* === Footer tamisé uniquement pour index === */
+body.index footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  font-size: 0.9rem;
+}
+
+/* === Header centré avec padding réduit === */
 body.index header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem; /* ✅ réduit pour compacter */
+  margin-bottom: 0;    /* ✅ neutralise tout espace résiduel */
 }
 
 body.index header h1 {
@@ -160,7 +150,7 @@ body.index .choix-gammes {
 body.index .choix-gammes img {
   width: 200px;
   height: auto;
-  border-radius: 20px; /* coins arrondis */
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s;
   cursor: pointer;
@@ -171,13 +161,8 @@ body.index .choix-gammes img:hover {
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
 }
 
-
-/* === Footer tamisé avec effet flou === */
-body.index footer {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  backdrop-filter: blur(4px);
-  font-size: 0.9rem;
+/* === Main avec espace réduit sous le header === */
+body.index main {
+  margin-top: 50px; 
+  padding-top: 0; /* ✅ aucun espace ajouté */
 }
