@@ -26,6 +26,12 @@ header h1 {
     1px 1px 0 #444;
 }
 
+.choix-gammes p {
+  color: #f4f4f4;
+  text-align: center;
+
+  }
+
 /* === Boutons de navigation === */
 .retour {
   text-align: center;

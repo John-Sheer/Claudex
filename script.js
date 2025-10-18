@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500 + i * 300);
         });
 
-
+      
         // Message de bienvenue avec fondu
         const welcome = document.createElement('div');
         welcome.textContent = 'Bienvenue chez nous!!!...🍻';
@@ -40,10 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+        // Animation d’entrée pour bb.html et SNB.html
         document.addEventListener('DOMContentLoaded', () => {
         const body = document.body;
 
-        // Animation d’entrée pour bb.html et SNB.html
+
         if (body.classList.contains('gamme-page')) {
             const cards = document.querySelectorAll('.boisson');
             cards.forEach((card, i) => {
