@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Message de bienvenue avec fondu
         const welcome = document.createElement('div');
-        welcome.textContent = 'Savourez-bien nos produits!!!...🍻';
+        welcome.textContent = 'Bienvenue chez nous!!!...🍻';
         Object.assign(welcome.style, {
             position: 'fixed',
             top: '20px',
             left: '50%',
             transform: 'translateX(-50%)',
             background: 'rgba(0,0,0,0.8)',
-            color: 'white',
+            color: 'red',
             padding: '1rem 2rem',
             borderRadius: '10px',
             zIndex: '999',
